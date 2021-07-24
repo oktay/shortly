@@ -28,7 +28,7 @@ function Form({ setLinks }) {
     <Box pt="16">
       <Container maxW="container.xl">
         <Box bg="purple.700" p="12" rounded="md">
-          <Flex as="form" alignItems="stretch" onSubmit={handleSubmit} flexDirection={{ base: 'column', md: 'row' }}>
+          <Flex as="form" alignItems="stretch" onSubmit={handleSubmit} flexDirection={{ base: 'column', md: 'row' }} onBlur={() => setError(false)}>
             <FormControl id="url" isInvalid={error}>
               <Input type="text" placeholder="Shorten a link ere..." variant="filled" h="12" _focus={{ bg: 'white' }} 
               value={url} onChange={({ target }) => setUrl(target.value)} disabled={loading} />
