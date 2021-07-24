@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Flex, Link, Stack, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Link, Stack, Text } from "@chakra-ui/react"
 
 function Footer() {
   return (
