@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -24,6 +25,7 @@ function App() {
       <Hero />
       <Form setLinks={setLinks} />
       <List links={links} />
+      <Footer />
     </Box>
   );
 }
