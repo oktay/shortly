@@ -24,7 +24,7 @@ function App() {
       <Header />
       <Hero />
       <Form setLinks={setLinks} />
-      <List links={links} />
+      <List links={links} setLinks={setLinks} />
       <Footer />
     </Box>
   );
