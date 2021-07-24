@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import List from './components/List';
 
 function App() {
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem('links')) {
+      setLinks(JSON.parse(localStorage.getItem('links')))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('links', JSON.stringify(links))
+  }, [links])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box bg="gray.100">
+      <Header />
+      <Hero />
+      <Form setLinks={setLinks} />
+      <List links={links} />
+    </Box>
   );
 }
 
