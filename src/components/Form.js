@@ -28,13 +28,13 @@ function Form({ setLinks }) {
     <Box pt="16">
       <Container maxW="container.xl">
         <Box bg="purple.700" p="12" rounded="md">
-          <Flex as="form" alignItems="stretch" onSubmit={handleSubmit}>
+          <Flex as="form" alignItems="stretch" onSubmit={handleSubmit} flexDirection={{ base: 'column', md: 'row' }}>
             <FormControl id="url" isInvalid={error}>
-              <Input type="text" placeholder="Shorten a link ere..." variant="filled" h="full" _focus={{ bg: 'white' }} 
+              <Input type="text" placeholder="Shorten a link ere..." variant="filled" h="12" _focus={{ bg: 'white' }} 
               value={url} onChange={({ target }) => setUrl(target.value)} disabled={loading} />
               <FormErrorMessage>{error}</FormErrorMessage>
             </FormControl>
-            <Button ml="4" size="lg" colorScheme="teal" isLoading={loading} type="submit">Shorten It!</Button>
+            <Button ml={{ base: "0", md: "4" }} mt={{ base: "4", md: "0" }} size="lg" colorScheme="teal" isLoading={loading} type="submit">Shorten It!</Button>
           </Flex>
         </Box>
       </Container>
