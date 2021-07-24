@@ -10,7 +10,7 @@ function Hero() {
             Build your brand's recognition and get 
             detailed insights on how your links are performing.
           </Text>
-          <Button rounded="full" colorScheme="teal" mt="6" size="lg">Get Started</Button>
+          <Button as="a" href="#form" rounded="full" colorScheme="teal" mt="6" size="lg">Get Started</Button>
         </Box>
       </Container>
     </Box>

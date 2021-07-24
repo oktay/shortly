@@ -2,7 +2,7 @@ import { Box, Container, Flex, Link, Stack, Text } from "@chakra-ui/react"
 
 function Footer() {
   return (
-    <Box as="footer" bg="white" py="8">
+    <Box as="footer" bg="white" py="8" fontSize="sm">
       <Container maxW="container.xl">
         <Flex justifyContent="space-between">
           <Link isExternal href="https://oktaycolakoglu.com" color="gray.500" fontWeight="medium">Oktay Çolakoğlu</Link>

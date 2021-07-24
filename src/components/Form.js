@@ -25,7 +25,7 @@ function Form({ setLinks }) {
   }
 
   return (
-    <Box pt="16">
+    <Box pt="16" id="form">
       <Container maxW="container.xl">
         <Box bg="purple.700" p="12" rounded="md">
           <Flex as="form" alignItems="stretch" onSubmit={handleSubmit} flexDirection={{ base: 'column', md: 'row' }} onBlur={() => setError(false)}>
